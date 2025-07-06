@@ -3,9 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>文欣大笨蛋专区</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24);
+            background-size: 400% 400%;
+            animation: gradientShift 3s ease infinite;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .main-title {
+            font-size: 4rem;
+            color: #fff;
+            text-shadow: 3px 3px 0px #000;
+            animation: bounce 2s ease-in-out infinite;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+
+        .emoji-rain {
+            position: fixed;
+            top: -50px;
+            animation: fall 3s linear infinite;
+            font-size: 2rem;
+            z-index: 1;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100vh) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: pulse 2s ease-in-out infinite;
+            margin-bottom: 30px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .fun-facts {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 20px 0;
+            animation: wiggle 1s ease-in-out infinite;
+        }
+
+        @keyframes wiggle {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .click-button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .click-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+        }
+
+        .floating-text {
+            position: fixed;
+            font-size: 1.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 0px #000;
+            animation: float 4s ease-in-out infinite;
+            z-index: 2;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .spinning-emoji {
+            font-size: 3rem;
+            animation: spin 2s linear infinite;
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-    <h1>文欣，是大笨蛋</h1>
+    <div class="emoji-rain" style="left: 10%; animation-delay: 0s;">🤡</div>
+    <div class="emoji-rain" style="left: 20%; animation-delay: 0.5s;">🤪</div>
+    <div class="emoji-rain" style="left: 30%; animation-delay: 1s;">😵</div>
+    <div class="emoji-rain" style="left: 40%; animation-delay: 1.5s;">🤯</div>
+    <div class="emoji-rain" style="left: 50%; animation-delay: 2s;">🤡</div>
+    <div class="emoji-rain" style="left: 60%; animation-delay: 2.5s;">🤪</div>
+    <div class="emoji-rain" style="left: 70%; animation-delay: 3s;">😵</div>
+    <div class="emoji-rain" style="left: 80%; animation-delay: 3.5s;">🤯</div>
+    <div class="emoji-rain" style="left: 90%; animation-delay: 4s;">🤡</div>
+
+    <div class="floating-text" style="top: 10%; left: 5%;">笨蛋警报！🚨</div>
+    <div class="floating-text" style="top: 20%; right: 5%;">大笨蛋出没！⚠️</div>
+    <div class="floating-text" style="bottom: 10%; left: 10%;">笨蛋指数：MAX！📊</div>
+    <div class="floating-text" style="bottom: 20%; right: 10%;">笨蛋认证中...✅</div>
+
+    <h1 class="main-title">
+        🎉 文欣大笨蛋专区 🎉
+    </h1>
+
+    <div class="content-box">
+        <div class="fun-facts">
+            <span class="spinning-emoji">🤡</span>
+            官方认证：文欣是超级大笨蛋！
+            <span class="spinning-emoji">🤪</span>
+        </div>
+        
+        <div class="fun-facts">
+            笨蛋等级：★★★★★ (满级笨蛋！)
+        </div>
+        
+        <div class="fun-facts">
+            笨蛋技能：
+            <br>
+            • 专业犯傻 🤦‍♀️
+            <br>
+            • 高级迷糊 😵‍💫
+            <br>
+            • 终极呆萌 🤤
+        </div>
+        
+        <button class="click-button" onclick="addMoreFun()">
+            点击获取更多笨蛋认证！
+        </button>
+    </div>
+
+    <div style="font-size: 2rem; color: #fff; text-shadow: 2px 2px 0px #000;">
+        <span class="spinning-emoji">🎪</span>
+        笨蛋文欣，天下无敌！
+        <span class="spinning-emoji">🎭</span>
+    </div>
+
+    <script>
+        function addMoreFun() {
+            const messages = [
+                "🎉 笨蛋认证成功！",
+                "🤡 文欣笨蛋指数爆表！",
+                "🎪 恭喜！笨蛋等级提升！",
+                "🤪 笨蛋技能解锁新成就！",
+                "🎭 文欣：笨蛋界的扛把子！"
+            ];
+            
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            alert(randomMessage);
+            
+            // 添加更多emoji雨
+            createEmojiRain();
+        }
+
+        function createEmojiRain() {
+            const emojis = ['🤡', '🤪', '😵', '🤯', '🤦‍♀️', '😵‍💫', '🤤'];
+            for (let i = 0; i < 5; i++) {
+                const emoji = document.createElement('div');
+                emoji.className = 'emoji-rain';
+                emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                emoji.style.left = Math.random() * 100 + '%';
+                emoji.style.animationDelay = Math.random() * 2 + 's';
+                document.body.appendChild(emoji);
+                
+                // 3秒后移除
+                setTimeout(() => {
+                    emoji.remove();
+                }, 3000);
+            }
+        }
+
+        // 每5秒自动创建emoji雨
+        setInterval(createEmojiRain, 5000);
+    </script>
 </body>
 </html>
