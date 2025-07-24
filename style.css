@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #222;
+    color: #fff;
+    font-family: '微软雅黑', Arial, sans-serif;
+    overflow-x: hidden;
+}
+.center-box {
+    max-width: 500px;
+    margin: 60px auto 0 auto;
+    background: rgba(0,0,0,0.7);
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    text-align: center;
+}
+.hidden { display: none; }
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+.carousel video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8) contrast(1.1) saturate(1.2) grayscale(0.1);
+    transition: filter 0.5s;
+}
+.carousel .movie-filter {
+    filter: brightness(0.7) contrast(1.3) grayscale(0.3) sepia(0.2) blur(1px);
+}
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 60px;
+    height: 80px;
+    background: radial-gradient(circle at 50% 30%, #ffb6c1 60%, #ff69b4 100%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    box-shadow: 0 8px 24px rgba(255,105,180,0.3);
+    animation: floatUp 6s linear forwards;
+    cursor: pointer;
+}
+@keyframes floatUp {
+    0% { bottom: -100px; }
+    100% { bottom: 110%; }
+}
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.confession-btn {
+    margin: 20px 10px 0 10px;
+    padding: 12px 32px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    background: #ff69b4;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.confession-btn:hover {
+    background: #ff1493;
+}
+.refuse-btn {
+    background: #aaa;
+    color: #fff;
+    cursor: not-allowed;
+    pointer-events: none;
+    position: relative;
+    left: 0;
+    transition: left 0.2s;
+}
+.music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+} 
