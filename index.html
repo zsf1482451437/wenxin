@@ -8,11 +8,13 @@
 </head>
 <body>
     <audio id="bgm" src="media/music.mp4" autoplay loop></audio>
+    <!-- 添加告白成功后的音乐 -->
+    <audio id="love-music" src="media/music.mp4" loop></audio>
     <div class="music-control">
         <button onclick="window.bgm.paused ? window.bgm.play() : window.bgm.pause()">🎵</button>
     </div>
     <div class="center-box" id="qa-box">
-        <p>还记得我们加微信，是几号吗？</p>
+        <p>还记得我们加微信的日期吗？</p>
         <input type="text" id="answer" placeholder="如：2023-05-20">
         <button onclick="QA.check()">提交</button>
         <div id="qa-tip" style="color:#ffb6c1;margin-top:10px;"></div>
@@ -36,6 +38,7 @@
     <script>
         window.onload = function() {
             window.bgm = document.getElementById('bgm');
+            window.loveMusic = document.getElementById('love-music');
             window.bgm.play().catch(()=>{});
         }
     </script>

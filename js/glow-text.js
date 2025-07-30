@@ -17,6 +17,15 @@ const GlowText = (() => {
     let heartInterval = null;
 
     function show() {
+        // 暂停原背景音乐，播放告白音乐
+        if (window.bgm) {
+            window.bgm.pause();
+        }
+        if (window.loveMusic) {
+            window.loveMusic.currentTime = 0;
+            window.loveMusic.play().catch(()=>{});
+        }
+
         const modal = document.getElementById('glow-modal');
         const content = document.getElementById('glow-content');
         
@@ -98,7 +107,7 @@ const GlowText = (() => {
         heart.classList.add(randomColor);
         
         // 随机选择爱心符号
-        const heartSymbols = ['❤️', '💖', '💕', '💗', '💝', '💘', '💜', '🧡', '💛', '💚', '💙'];
+        const heartSymbols = ['❤️', '💖', '💕', '💗', '💝', '💘', '💜', '🧡', '💛', '💚', '💙', '欣欣大人', '欣宝', 'I❤️欣欣', '菜菜', '我喜欢欣欣', '欣欣大人', '欣宝', 'I❤️欣欣', '菜菜', '我喜欢你', '文欣'];
         heart.textContent = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
         
         // 设置随机扩散方向和距离
@@ -136,6 +145,14 @@ const GlowText = (() => {
         
         // 移除所有爱心
         document.querySelectorAll('.heart').forEach(heart => heart.remove());
+        
+        // 停止告白音乐，恢复背景音乐
+        if (window.loveMusic) {
+            window.loveMusic.pause();
+        }
+        if (window.bgm) {
+            window.bgm.play().catch(()=>{});
+        }
     }
 
     return { show, close };
