@@ -25,7 +25,7 @@ const Confession = (() => {
         refuseBtn.onclick = (e) => e.preventDefault();
     }
     function accept() {
-        alert('你是我的女主啦！💖');
+        GlowText.show();
         // 复现回忆：气球点破
         document.querySelectorAll('.balloon').forEach(b=>{
             b.onclick = () => {
