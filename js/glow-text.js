@@ -19,13 +19,11 @@ const GlowText = (() => {
     let heartInterval = null;
 
     function show() {
-        // 暂停原背景音乐，播放告白音乐
-        if (window.bgm) {
-            window.bgm.pause();
-        }
-        if (window.loveMusic) {
-            window.loveMusic.currentTime = 0;
-            window.loveMusic.play().catch(()=>{});
+        // 播放告白音乐
+        const loveMusic = document.getElementById('love-music');
+        if (loveMusic) {
+            loveMusic.currentTime = 0;
+            loveMusic.play().catch(()=>{});
         }
 
         const modal = document.getElementById('glow-modal');
@@ -148,12 +146,10 @@ const GlowText = (() => {
         // 移除所有爱心
         document.querySelectorAll('.heart').forEach(heart => heart.remove());
         
-        // 停止告白音乐，恢复背景音乐
-        if (window.loveMusic) {
-            window.loveMusic.pause();
-        }
-        if (window.bgm) {
-            window.bgm.play().catch(()=>{});
+        // 停止音乐
+        const loveMusic = document.getElementById('love-music');
+        if (loveMusic) {
+            loveMusic.pause();
         }
     }
 
