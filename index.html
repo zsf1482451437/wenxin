@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>给文欣的告白</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- 只保留告白成功后的音乐 -->
     <audio id="love-music" src="media/music.mp4" loop></audio>
-    
+
     <div class="center-box" id="qa-box">
-        <p>还记得我们加微信的日期吗？</p>
-        <input type="text" id="answer" placeholder="如：2023-05-20">
-        <button onclick="QA.check()">提交</button>
-        <div id="qa-tip" style="color:#ffb6c1;margin-top:10px;"></div>
+      <p>还记得我们加微信的日期吗？</p>
+      <input type="text" id="answer" placeholder="如：2023-05-20" />
+      <button onclick="QA.check()">提交</button>
+      <div id="qa-tip" style="color: #ffb6c1; margin-top: 10px"></div>
     </div>
     <div class="center-box hidden" id="carousel-box">
-        <h2>一路走来</h2>
-        <div class="carousel" id="carousel">
-            <video id="carousel-video" src="media/video.mp4" controls style="width:100%;height:100%;"></video>
-        </div>
+      <h2>一路走来</h2>
+      <div class="carousel" id="carousel">
+        <video
+          id="carousel-video"
+          src="media/video.mp4"
+          controls
+          style="width: 100%; height: 100%"
+        ></video>
+      </div>
     </div>
     <div class="center-box hidden" id="confession-box">
-        <p style="font-size:1.5rem;">亲爱的文欣，我喜欢你，愿意当我的女朋友吗？</p>
-        <button class="confession-btn accept-btn" onclick="Confession.accept()">我愿意^_^</button>
-        <button class="confession-btn refuse-btn" id="refuse-btn">我不要T_T</button>
+      <p style="font-size: 1.5rem">
+        亲爱的文欣，我喜欢你，愿意当我的女朋友吗？
+      </p>
+      <button class="confession-btn accept-btn" onclick="Confession.accept()">
+        我愿意^_^
+      </button>
+      <button class="confession-btn refuse-btn" id="refuse-btn">
+        我不要T_T
+      </button>
     </div>
     <div id="balloon-bg"></div>
-    
+
     <script src="js/balloon.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/qa.js"></script>
+    <script src="js/love-letter.js"></script>
     <script src="js/confession.js"></script>
-    
+
     <!-- 发光文字弹窗 -->
     <div id="glow-modal" class="hidden">
-        <div class="glow-content" id="glow-content"></div>
+      <div class="glow-content" id="glow-content"></div>
     </div>
     <script src="js/glow-text.js"></script>
-</body>
+  </body>
 </html>

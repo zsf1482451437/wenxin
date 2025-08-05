@@ -1,220 +1,402 @@
 body {
-    margin: 0;
-    padding: 0;
-    background: #222;
-    color: #fff;
-    font-family: '微软雅黑', Arial, sans-serif;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background: #222;
+  color: #fff;
+  font-family: "微软雅黑", Arial, sans-serif;
+  overflow-x: hidden;
 }
 .center-box {
-    max-width: 520px;
-    margin: 60px auto 0 auto;
-    background: rgba(0,0,0,0.7);
-    border-radius: 20px;
-    padding: 30px 20px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-    text-align: center;
+  max-width: 520px;
+  margin: 60px auto 0 auto;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
-.hidden { display: none; }
+.hidden {
+  display: none;
+}
 .carousel {
-    position: relative;
-    width: 100%;
-    margin: 20px 0;
-    overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 .carousel video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.8) contrast(1.1) saturate(1.2) grayscale(0.1);
-    transition: filter 0.5s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8) contrast(1.1) saturate(1.2) grayscale(0.1);
+  transition: filter 0.5s;
 }
 .carousel .movie-filter {
-    filter: brightness(0.7) contrast(1.3) grayscale(0.3) sepia(0.2) blur(1px);
+  filter: brightness(0.7) contrast(1.3) grayscale(0.3) sepia(0.2) blur(1px);
 }
 .balloon {
-    position: absolute;
-    bottom: -100px;
-    width: 60px;
-    height: 80px;
-    background: radial-gradient(circle at 50% 30%, #ffb6c1 60%, #ff69b4 100%);
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    box-shadow: 0 8px 24px rgba(255,105,180,0.3);
-    animation: floatUp 6s linear forwards;
-    cursor: pointer;
+  position: absolute;
+  bottom: -100px;
+  width: 60px;
+  height: 80px;
+  background: radial-gradient(circle at 50% 30%, #ffb6c1 60%, #ff69b4 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  box-shadow: 0 8px 24px rgba(255, 105, 180, 0.3);
+  animation: floatUp 6s linear forwards;
+  cursor: pointer;
 }
 @keyframes floatUp {
-    0% { bottom: -100px; }
-    100% { bottom: 110%; }
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 110%;
+  }
 }
 @keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .confession-btn {
-    margin: 20px 10px 0 10px;
-    border: none;
-    border-radius: 30px;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.3s, left 0.2s, top 0.2s, font-size 0.2s, padding 0.2s;
-    position: relative;
+  margin: 20px 10px 0 10px;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, left 0.2s, top 0.2s, font-size 0.2s, padding 0.2s;
+  position: relative;
 }
 
 /* 愿意按钮大一点 */
 .accept-btn {
-    font-size: 1.5rem;
-    padding: 18px 48px;
-    background: #ff69b4;
+  font-size: 1.5rem;
+  padding: 18px 48px;
+  background: #ff69b4;
 }
 .accept-btn:hover {
-    background: #ff1493;
+  background: #ff1493;
 }
 
 /* 拒绝按钮小一点 */
 .refuse-btn {
-    font-size: 1rem;
-    padding: 8px 20px;
-    background: #aaa;
+  font-size: 1rem;
+  padding: 8px 20px;
+  background: #aaa;
 }
 .refuse-btn:hover {
-    background: #888;
+  background: #888;
 }
 .music-control {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 10;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
 }
 
 /* 发光文字弹窗 */
 #glow-modal {
-    position: fixed;
-    left: 0; top: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.95);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: fadeIn 0.8s ease-in-out;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 #glow-modal.hidden {
-    display: none;
+  display: none;
 }
 
 .glow-content {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    line-height: 1.8;
-    letter-spacing: 3px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.8;
+  letter-spacing: 3px;
 }
 
 .glow-text {
-    color: #fff;
-    text-shadow: 
-        0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 15px #ff69b4,
-        0 0 20px #ff69b4,
-        0 0 35px #ff69b4,
-        0 0 40px #ff69b4;
-    animation: glow 2s ease-in-out infinite alternate;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff69b4, 0 0 20px #ff69b4,
+    0 0 35px #ff69b4, 0 0 40px #ff69b4;
+  animation: glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
-    from {
-        text-shadow: 
-            0 0 5px #fff,
-            0 0 10px #fff,
-            0 0 15px #ff69b4,
-            0 0 20px #ff69b4,
-            0 0 35px #ff69b4,
-            0 0 40px #ff69b4;
-    }
-    to {
-        text-shadow: 
-            0 0 2px #fff,
-            0 0 5px #fff,
-            0 0 8px #ff69b4,
-            0 0 12px #ff69b4,
-            0 0 18px #ff69b4,
-            0 0 25px #ff69b4;
-    }
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff69b4, 0 0 20px #ff69b4,
+      0 0 35px #ff69b4, 0 0 40px #ff69b4;
+  }
+  to {
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 8px #ff69b4, 0 0 12px #ff69b4,
+      0 0 18px #ff69b4, 0 0 25px #ff69b4;
+  }
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-} 
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /* 当前显示的行（正常大小和亮度） */
 .current-line {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 /* 最终显示的所有行（小字体，暗淡亮度） */
 .final-text {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    opacity: 0.7;
-    text-shadow: 
-        0 0 3px #fff,
-        0 0 6px #fff,
-        0 0 9px #ff69b4,
-        0 0 12px #ff69b4,
-        0 0 18px #ff69b4,
-        0 0 22px #ff69b4;
-    animation: none; /* 取消发光动画 */
-} 
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  opacity: 0.7;
+  text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #ff69b4, 0 0 12px #ff69b4,
+    0 0 18px #ff69b4, 0 0 22px #ff69b4;
+  animation: none; /* 取消发光动画 */
+}
 
 /* 爱心扩散动画 - 放大更多 */
 .heart {
-    position: fixed;
-    font-size: 1rem; /* 初始小一点 */
-    color: #ff69b4;
-    pointer-events: none;
-    z-index: 1001;
-    animation: heartExpand 3s ease-out forwards;
-    text-shadow: 0 0 10px #ff69b4;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  position: fixed;
+  font-size: 1rem; /* 初始小一点 */
+  color: #ff69b4;
+  pointer-events: none;
+  z-index: 1001;
+  animation: heartExpand 3s ease-out forwards;
+  text-shadow: 0 0 10px #ff69b4;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes heartExpand {
-    0% {
-        transform: translate(-50%, -50%) scale(0.1);
-        opacity: 0;
-    }
-    20% {
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-50%, -50%) translate(var(--random-x), var(--random-y)) scale(4); /* 从 scale(2) 改为 scale(4) */
-        opacity: 0;
-    }
+  0% {
+    transform: translate(-50%, -50%) scale(0.1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(var(--random-x), var(--random-y))
+      scale(4); /* 从 scale(2) 改为 scale(4) */
+    opacity: 0;
+  }
 }
 
 /* 爱心的不同颜色变体 */
-.heart.pink { color: #ff69b4; text-shadow: 0 0 15px #ff69b4; }
-.heart.red { color: #ff1493; text-shadow: 0 0 15px #ff1493; }
-.heart.white { color: #fff; text-shadow: 0 0 15px #fff; }
-.heart.purple { color: #da70d6; text-shadow: 0 0 15px #da70d6; }
-.heart.orange { color: #ffa500; text-shadow: 0 0 15px #ffa500; }
-.heart.cyan { color: #00ffff; text-shadow: 0 0 15px #00ffff; }
+.heart.pink {
+  color: #ff69b4;
+  text-shadow: 0 0 15px #ff69b4;
+}
+.heart.red {
+  color: #ff1493;
+  text-shadow: 0 0 15px #ff1493;
+}
+.heart.white {
+  color: #fff;
+  text-shadow: 0 0 15px #fff;
+}
+.heart.purple {
+  color: #da70d6;
+  text-shadow: 0 0 15px #da70d6;
+}
+.heart.orange {
+  color: #ffa500;
+  text-shadow: 0 0 15px #ffa500;
+}
+.heart.cyan {
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff;
+}
 
 /* 终端光标效果 - 只用文字光标 */
 .cursor {
-    display: inline;
-    color: #fff;
-    animation: blink 1s infinite;
+  display: inline;
+  color: #fff;
+  animation: blink 1s infinite;
 }
 
 @keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
-} 
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 情书样式 - 简化版本 */
+#love-letter-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #222;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+#love-letter-container.show {
+  opacity: 1;
+}
+
+#love-letter-container.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.letter-envelope {
+  position: relative;
+  width: 400px;
+  height: 280px;
+  cursor: pointer;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  animation: letterFloat 1.5s ease-out;
+}
+
+.letter-envelope:hover {
+  transform: scale(0.85);
+}
+
+.letter-envelope.opening {
+  cursor: default;
+}
+
+.envelope-body {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(145deg, #f4f1e8 0%, #e8e2d5 100%);
+  border: 2px solid #d4c5a9;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  bottom: 0;
+}
+
+.envelope-flap {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  height: 120px;
+  background: linear-gradient(145deg, #f9f6f0 0%, #ede7da 100%);
+  border: 2px solid #d4c5a9;
+  border-radius: 8px 8px 0 0;
+  transform-origin: bottom center;
+  transition: transform 1s ease-in-out;
+  z-index: 2;
+}
+
+.envelope-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(145deg, #f9f6f0 0%, #ede7da 100%);
+  border: 2px solid #d4c5a9;
+  border-radius: 8px 8px 0 0;
+  clip-path: polygon(0 100%, 50% 20%, 100% 100%);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.letter-envelope.opening .envelope-flap {
+  transform: rotateX(-180deg);
+}
+
+.letter-seal {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: #ff69b4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4);
+  z-index: 3;
+  transition: opacity 1s ease-in-out;
+}
+
+.letter-envelope.opening .letter-seal {
+  opacity: 0;
+}
+
+.letter-paper {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #fefefe;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(0.1) translateY(100px);
+  opacity: 0;
+  transition: all 2s ease-out;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.letter-paper.unfolding {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.letter-header {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff69b4;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ffb6c1;
+}
+
+.letter-content {
+  color: #333;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* 情书飘落效果 */
+@keyframes letterFloat {
+  0% {
+    transform: translateY(-100px) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotate(5deg) scale(0.8);
+    opacity: 1;
+  }
+}
