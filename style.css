@@ -400,3 +400,61 @@ body {
     opacity: 1;
   }
 }
+
+/* 两个小人相互靠近的动画 */
+.love-progress-container {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.love-person {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  transition: left 0.3s ease-out;
+}
+
+.love-person.male {
+  left: 10%;
+  color: #87ceeb;
+  text-shadow: 0 0 10px #87ceeb;
+}
+
+.love-person.female {
+  right: 10%;
+  color: #ffb6c1;
+  text-shadow: 0 0 10px #ffb6c1;
+}
+
+/* 爱心出现在中间 */
+.love-heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: #ff69b4;
+  text-shadow: 0 0 15px #ff69b4;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  animation: heartBeat 1s ease-in-out infinite alternate;
+}
+
+.love-heart.visible {
+  opacity: 1;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
