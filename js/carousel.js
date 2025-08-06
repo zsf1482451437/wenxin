@@ -11,9 +11,9 @@ const Carousel = (() => {
 
     const progress = videoEl.currentTime / videoEl.duration;
 
-    // 计算两个小人的位置（从10%和90%位置开始相互靠近）
-    const malePosition = 10 + progress * 35; // 从10%移动到45%
-    const femalePosition = 90 - progress * 35; // 从90%移动到55%
+    // 计算两个小人的位置（从5%和95%位置开始相互靠近，为图片留出空间）
+    const malePosition = 5 + progress * 35; // 从5%移动到40%
+    const femalePosition = 95 - progress * 35; // 从95%移动到60%
 
     malePersonEl.style.left = malePosition + "%";
     femalePersonEl.style.right = 100 - femalePosition + "%";
@@ -32,8 +32,8 @@ const Carousel = (() => {
     videoEl.play().catch(() => {});
 
     // 重置小人位置
-    malePersonEl.style.left = "10%";
-    femalePersonEl.style.right = "10%";
+    malePersonEl.style.left = "5%";
+    femalePersonEl.style.right = "5%";
     loveHeartEl.classList.remove("visible");
   }
 
